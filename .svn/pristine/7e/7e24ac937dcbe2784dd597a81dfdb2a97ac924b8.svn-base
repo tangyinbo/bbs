@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=src/main/webapp/js/jquery.1.11.js,src/main/webapp/script/jquery-1.8.3.min.js,src/main/webapp/ckeditor/ckeditor.js
+validator.Unchecked=

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@import "global-value.less";
+
+//分页
+@page-item-hw : 28px;
+@page-btn-bc : #428bca;
+@page-btn-bgc : transparent !important;
+@page-btn-fc : #333;
+
+@page-btn-bgc-hover : #428bca;
+@page-btn-fc-hover : #fff;
+.bbs-pagination {
+    display: block;
+    & > div,
+    & > span {
+        display: inline-block;
+        & a {
+            display: block;
+            .bbs-font(@page-btn-fc);
+            text-decoration: none;
+            height : @page-item-hw;
+            line-height: @page-item-hw;
+            width : @page-item-hw;
+            text-align: center;
+            vertical-align: middle;
+            border : 1px solid @page-btn-bc;
+            cursor: pointer;
+            &:hover,
+            &:active {
+                color : @page-btn-fc-hover;
+                background-color: @page-btn-bgc-hover;
+            }
+        }
+    }
+    .page-active {
+        color : @page-btn-fc-hover;
+        background-color: @page-btn-bgc-hover;
+    }
+}

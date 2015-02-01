@@ -1,0 +1,22 @@
+<div class="pgs">
+				<span class="pgb" id="visitedforumstmp"> <a
+					href="http://bbs.xiaomi.cn/forum-15-1.html">返回列表</a> </span>
+				<div class="pg">
+					<a href="http://bbs.xiaomi.cn/thread-11007923-2-1.html">1</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-2-1.html">2</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-3-1.html">3</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-4-1.html">4</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-5-1.html">5</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-6-1.html">6</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-7-1.html">7</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-8-1.html">8</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-9-1.html">9</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-10-1.html">10</a> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-52-1.html" class="last">...
+						52</a> <label> <input type="text" name="custompage" class="px"
+						size="2" title="输入页码，按回车快速跳转" value="1"
+						onkeydown="if(event.keyCode==13) {window.location='forum.php?mod=viewthread&amp;tid=11007923&amp;extra=page%3D1&amp;page='+this.value;; doane(event);}">
+						<span title="共 52 页"> / 52 页</span> </label> <a
+						href="http://bbs.xiaomi.cn/thread-11007923-2-1.html" class="nxt">下一页</a>
+				</div>
+			</div>

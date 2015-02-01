@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+@import "global-value.less";
+@import "pagination.less";
+
+body > div {
+   // border : 1px solid red;
+}
+
+@w-head-height : 120px;
+@w-caption-height : 160px;
+@w-post-bh : 720px;
+@w-post-fh : 280px;
+.m-heading {
+    width : 100%;
+    height: @w-head-height;
+
+    img {
+        width : 160px;
+        height : 120px;
+    }
+}
+
+.m-caption {
+    width : 100%;
+    height : @w-caption-height;
+}
+
+.post-head {
+//    border : 1px solid red;
+    width : 100%;
+}
+
+//发帖按钮
+@posted-btn-bgc:#428bca;
+@posted-btn-bdc:#428bca;
+@posted-btn-fc:#fff;
+.posted-btn {
+    padding: 8px 18px;
+    margin : 6px 2px;
+    background-color: @posted-btn-bgc;
+    border-color: @posted-btn-bdc;
+    .bbs-radius();
+    .bbs-font(@posted-btn-fc);
+    &:hover,
+    &:active,
+    &:focus {
+        background-color:saturate(rgb(66,139,202), 80%)
+        //background-color: rgba(0,0,12, .6);
+    }
+}
+
+
+@p-context-fc : #000;
+@p-context-fs : 14px;
+.post-body {
+    .pbody-head {
+        display: block;
+        margin-top: 8px;
+        margin-bottom: 5px;
+        div {
+            float: left;
+            text-align : center;
+            padding: 5px 15px;
+            margin: 0 2px;
+            .bbs-font(@main-font-color);
+            border : 1px solid @main-border-color;
+            cursor: pointer;
+            .bbs-radius();
+            &:hover,
+            &:active {
+                color : @main-fc-hover;
+                border : 1px solid @main-bdc-hover;
+                background-color: @main-bgc-hover;
+            }
+        }
+    }
+    .pbody-title {
+        display: block;
+//        border : 1px solid red;
+        div {
+            display: inline-block;
+            a {
+                display: block;
+                text-decoration : none;
+                text-align : center;
+                padding: 6px 12px;
+                .bbs-font(@main-font-color);
+                font-weight: 800;
+                cursor: pointer;
+                &:hover,
+                &:active {
+                    color : @main-fc-hover;
+                    background-color: @main-bgc-hover;
+                }
+            }
+        }
+    }
+
+    .post-container {
+        padding: 2px;
+        margin: 4px 0;
+        .post-item {
+            border-top : 1px solid @main-border-color;
+            border-left : 1px solid @main-border-color;
+            border-right : 1px solid @main-border-color;
+//            border : 1px solid red;
+            &:last-child {
+                border-bottom : 1px solid @main-border-color;
+            }
+
+            .post-thead {
+                padding-top: 10px;
+            }
+
+            //帖子标题颜色
+            @p-title-fs : 15px;
+            @p-title-fw : 800;
+            .post-context{
+                padding: 4px 6px;
+                line-height: 32px;
+                overflow: hidden;
+                white-space:nowrap;
+                text-overflow: ellipsis;
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                .post-title {
+                    margin-left: 4px;
+                    margin-right: 4px;
+                    .bbs-font(@main-font-color, 15px);
+                }
+                @post-label-fc : #428bca;
+                .post-label {
+                    .bbs-font(@post-label-fc, 14px)
+                }
+            }
+            .post-lower {
+                .bbs-font(@main-font-color, 11px);
+            }
+        }
+        .post-pagination {
+            padding: 8px;
+            text-align: right;
+        }
+    }
+}
+
+.fast-post {
+    width : 966px;
+    height : @w-post-fh;
+    display: block;
+//    border : 1px solid red;
+    padding: 2px;
+    margin-bottom: 220px;
+}
+.pbody-head:before,
+.pbody-head:after,
+.post-row:before,
+.post-row:after,
+.btn-group:before,
+.btn-group:after{
+    display: table;
+    content: " ";
+}
+
+.pbody-head:after,
+.post-row:after,
+.btn-group:after {
+    clear: both;
+}
+
+@col-main-width : 512px;
+.post-row {
+    .col-main {
+        float: left;
+        width: @col-main-width;
+        padding: 2px 6px;
+//        border : 1px solid red;
+    }
+
+    .col-hd {
+        padding: 2px 6px;
+        float: left;
+        width: 80px;
+    }
+    .col-info {
+        padding: 2px 6px;
+        float: left;
+        width: 158px;
+//        border : 1px solid red;
+    }
+}
+
+div[class$="post-item"]:hover {
+   background-color:saturate(rgba(66,139,202,.1), 80%);
+   //background-color:rgba(66,139,202, .2);
+}

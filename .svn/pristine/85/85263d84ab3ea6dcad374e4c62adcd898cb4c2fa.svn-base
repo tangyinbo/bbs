@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+@import "global-value.less";
+
+@lw-width : 346px;
+@lw-height : 365px;
+@lw-bg-width : 396px;
+@lw-bg-height : 395px;
+@lw-mg-top : 40px;
+@lw-mg-right : 80px;
+@lw-bg : #FFF; //登录小窗口颜色
+@lw-fs : 14px;
+@lw-fm : "Microsoft Yahei", "宋体", "黑体", SimSun, Verdana, sans-serif;
+@lw-fc : #0099FF;
+@lw-ib : #0099FF;
+@lw-input-bc : #0099FF;
+@lw-input-fc :#0099FF;
+
+@lw-input-height : 38px;
+@lw-input-margin: 30px;//(@lw-width - @lw-input-width) / 2;
+
+.login-panel {
+    margin: 0px auto ;
+    margin-top : 150px;
+    width: @window-width;
+    height : 600px;
+    position: relative;
+    display: block;
+    background: url("../resource/image/index-bg.jpg") no-repeat;
+
+    .login-window-bg {
+        position: absolute;
+        display: block;
+        width: @lw-bg-width;
+        height: @lw-bg-height;
+        background-color: @lw-bg;
+        top : @lw-mg-top;
+        right : @lw-mg-right;
+        .login-opacity();
+    }
+
+    .login-from {
+        position: absolute;
+        display: block;
+        height: @lw-height;
+        width : @lw-width;
+        color: @lw-fc;
+        font-size: @lw-fs;
+        top : @lw-mg-top + (@lw-bg-height - @lw-height) / 2;
+        right : @lw-mg-right + (@lw-bg-width - @lw-width) / 2;
+
+        .login-heading {
+            display: block;
+            padding : 35px 0 15px 0;
+            font-size: @lw-fs * 3;
+            font-weight: bold;
+        }
+        .login-input-box {
+            margin-bottom: 15px;
+            display: block;
+        }
+        .login-input {
+//            display: block;
+            font-size: 20px;
+            padding: 15px 14px;
+            width: @lw-width - 28px;
+            background-color: transparent !important;
+            outline: none;
+            border: 1px solid @lw-ib;
+            color: @lw-fc;
+            cursor: pointer;
+        }
+        .login-checkbox {
+            font-weight: normal;
+            font-size: 14px;
+            color: @lw-fc;
+            background: url("../resource/image/login_checked.png") no-repeat 0 center;
+            padding-left: 18px;
+            cursor: pointer;
+            &:active,
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color:@lw-fc;
+            }
+        }
+
+        .login-forgot {
+            cursor: pointer;
+            color: @lw-fc;
+            float : right;
+        }
+
+        .login-in {
+            padding: 8px 85px;
+            .login-opacity();
+        }
+
+        .login-reg {
+            padding: 8px 52px;
+            .login-opacity();
+        }
+    }
+}
+
+input::-webkit-input-placeholder {
+    color: @lw-input-fc !important; /* WebKit browsers */
+}
+input:-moz-placeholder {
+    color: @lw-input-fc !important; /* Mozilla Firefox 4 to 18 */
+}
+input::-moz-placeholder {
+    color: @lw-input-fc !important; /* Mozilla Firefox 19+  */
+}
+input:-ms-input-placeholder {
+    color: @lw-input-fc !important; /* Internet Explorer 10+ */
+}

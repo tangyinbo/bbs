@@ -1,0 +1,45 @@
+@charset "UTF-8";
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #222222;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "宋体", "黑体", SimSun, Verdana, sans-serif;
+  font-weight: normal;
+}
+div {
+  display: block;
+}
+.bbs-container {
+  width: 970px;
+  margin: 0px auto;
+}
+.bbs-btn {
+  padding: 8px 15px;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}

@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import "opacity.less";
+@import "global-value.less";
+/*动画效果*/
+@-webkit-keyframes shake{
+  0% {
+   -webkit-transform-origin:top left;
+    -webkit-transform: rotate(30deg) scale(1);
+   
+		  border-bottom: 3px solid @main-border-color;
+  }
+   25% {
+
+   -webkit-transform-origin:top left;
+     -webkit-transform: rotate(10deg) scale(1);
+    
+ 		  border-bottom: 3px solid  white;
+  }
+   50% {
+   
+   
+   -webkit-transform-origin:top left;
+       -webkit-transform: rotate(0deg) scale(1);
+ 		   border-bottom: 3px solid @main-border-color;
+  }
+
+   70% {     
+       -webkit-transform:translate(-10px,-5px);
+       border-bottom: 3px solid @main-border-color;
+  }
+
+   75% {     
+       -webkit-transform:translate(5px,2px);
+       border-bottom: 3px solid @main-border-color;
+  }
+  100% {     
+       -webkit-transform:translate(0px,1px);
+       border-bottom: 3px solid @main-border-color;
+  }
+}
+@-moz-keyframes shake{
+  0% {
+		  border-bottom: 3px solid @main-border-color;
+  }
+     50% {
+ 		  border-bottom: 3px solid  white;
+  }
+   100% {
+ 		  border-bottom: 3px solid @main-border-color;
+  }
+}
+@keyframes shake{
+  0% {
+		  border-bottom: 3px solid @main-border-color;
+  }
+     50% {
+ 		  border-bottom: 3px solid  white;
+  }
+   100% {
+ 		  border-bottom: 3px solid @main-border-color;
+  }
+}

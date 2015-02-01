@@ -1,0 +1,578 @@
+.pull-right {
+    float: right
+}
+
+.pull-left {
+    float: left
+}
+
+.w {
+    width: 1030px;
+    margin: 0 auto
+}
+
+.tac {
+    text-align: center
+}
+
+.tal {
+    text-align: left
+}
+
+.tar {
+    text-align: right
+}
+
+.cp {
+    cursor: pointer
+}
+
+.g {
+    word-spacing: -0.43em
+}
+
+.g .u {
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto
+}
+
+.b {
+    font-weight: bold
+}
+
+.inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis
+}
+
+.loading-mask {
+    background: black;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none
+}
+
+.loading-mask.show {
+    display: block
+}
+
+.loading-page {
+    width: 100%;
+    height: 200px;
+    display: block;
+    background: #FFFFFF url(../images/loading2.gif) no-repeat center center
+}
+
+.relative {
+    position: relative
+}
+
+.absolute {
+    position: absolute
+}
+
+.star {
+    background: url(../images/star.png) no-repeat 0 0;
+    width: 13px;
+    height: 12px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.star.gray {
+    background-position: 0 -12px
+}
+
+.dialog {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background: #FFFFFF;
+    position: fixed;
+    z-index: 1000;
+    top: 10em;
+    left: 10em;
+    display: none;
+    padding: 0 25px;
+    -webkit-box-shadow: 0 0 16px #000000;
+    -moz-box-shadow: 0 0 16px #000000;
+    box-shadow: 0 0 16px #000000
+}
+
+.dialog.show {
+    display: block
+}
+
+.dialog .dialog_close {
+    height: 50px;
+    width: 50px;
+    float: right;
+    cursor: pointer;
+    background: url(../images/dialog_close.png) no-repeat center center;
+    margin-right: -15px
+}
+
+.dialog .dialog_title {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #DCE0E0;
+    font-size: 16px;
+    color: #000000
+}
+
+.dialog .dialog_content {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.dialog .dialog_content.loading {
+    background: url(../images/loading2.gif) no-repeat center center
+}
+
+.layout_body {
+    background: url(../images/login_banner3.jpg) no-repeat center top #FAFAFA
+}
+
+.layout_header {
+    background: #FAFAFA;
+    height: 82px;
+    line-height: 82px
+}
+
+.layout_header .layout_top .layout_top_logo {
+    margin-left: 22px;
+    margin-top: -6px
+}
+
+.layout_header .layout_top .layout_top_phone {
+    margin-right: 29px
+}
+
+.layout_footer {
+    background: #F7F7F7
+}
+
+.layout_footer .login_step {
+    background: #FF876C url(../images/login_step.png) no-repeat center center;
+    height: 66px
+}
+
+.layout_footer .four_regard .choose_me {
+    padding-top: 15px;
+    height: 50px;
+    border-bottom: 1px solid #E0E0E0;
+    text-align: center
+}
+
+.layout_footer .four_regard .choose_me h1 {
+    color: #8A8A8A;
+    font-size: 22px;
+    font-family: '微软雅黑';
+    display: inline-block;
+    width: 480px;
+    padding: 18px 0;
+    background: #F7F7F7
+}
+
+.layout_footer .four_regard .choose_me h1 strong {
+    font-size: 42px;
+    color: #FF876C;
+    margin-left: 5px
+}
+
+.layout_footer .four_regard .regard_list {
+    margin-top: 50px;
+    margin-left: -10px;
+    overflow: hidden;
+    padding: 0
+}
+
+.layout_footer .four_regard .regard_list li {
+    list-style: none;
+    float: left;
+    background: #FFFFFF;
+    width: 250px;
+    margin-left: 10px;
+    min-height: 390px
+}
+
+.layout_footer .four_regard .regard_list li .pic_show {
+    padding: 12px 0;
+    text-align: center
+}
+
+.layout_footer .four_regard .regard_list li .text_show {
+    color: #868686;
+    font-size: 16px;
+    line-height: 32px;
+    padding: 40px 25px
+}
+
+.layout_footer .four_regard .regard_list li .pic_show.bg1 {
+    background: #F68C8E
+}
+
+.layout_footer .four_regard .regard_list li .pic_show.bg2 {
+    background: #85D6C3
+}
+
+.layout_footer .four_regard .regard_list li .pic_show.bg3 {
+    background: #79C5EA
+}
+
+.layout_footer .four_regard .regard_list li .pic_show.bg4 {
+    background: #F090B4
+}
+
+.layout_footer .layout_copyright {
+    height: 23px;
+    line-height: 23px;
+    padding-top: 50px;
+    padding-bottom: 8px;
+    text-align: center;
+    color: #B7B6B6;
+    font-size: 12px
+}
+
+.login_banner_top {
+    height: 118px;
+    width: 100%;
+    display: block;
+    border: 0 none;
+    outline: none;
+    background: url(../images/login_banner.png) no-repeat center center
+}
+
+.login_banner_top, .login_banner_top:hover {
+    text-decoration: none
+}
+
+@-webkit-keyframes largen {
+    0% {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+    50% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+}
+
+.login_banner_top .xr_circle {
+    background: url(../images/xr_circle.png) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    outline: none;
+    border: 0 none;
+    display: block;
+    width: 93px;
+    height: 94px;
+    -webkit-animation: largen 1s infinite linear
+}
+
+.login_banner_top .xr_pointer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 24px;
+    height: 38px;
+    background: url(../images/xr_pointer.png) no-repeat
+}
+
+.login_banner {
+    height: 598px
+}
+
+.login_banner .login_panel {
+    position: relative;
+    display: block
+}
+
+.login_banner .login_panel .login_word {
+    position: absolute;
+    top: 140px;
+    left: 30px
+}
+
+.login_banner .login_panel .reg_now {
+    position: absolute;
+    top: 252px;
+    left: 30px;
+    font-family: "Microsoft Yahei", "宋体", "黑体", SimSun, Verdana, sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: transparent;
+    border: 0 none;
+    width: 121px;
+    height: 46px;
+    line-height: 46px;
+    outline: none;
+    display: block
+}
+
+.login_banner .login_panel .reg_now, .login_banner .login_panel .reg_now:hover {
+    text-decoration: none
+}
+
+.login_banner .login_panel .reg_now_bg {
+    position: absolute;
+    top: 252px;
+    left: 30px;
+    background: #76BAD2;
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    border: 1px solid #BDD5DD;
+    width: 121px;
+    height: 46px;
+    display: block
+}
+
+.login_banner .login_panel .guidelines {
+    width: 121px;
+    color: #FFFFFF;
+    line-height: 46px;
+    background: #FF876C;
+    background: rgba(255, 135, 108, 0.75);
+    filter: alpha(opacity=75);
+    font-size: 18px;
+    position: absolute;
+    top: 252px;
+    left: 185px;
+    text-align: center;
+    border: 1px solid #FFE0D8;
+    cursor: pointer
+}
+
+.login_banner .login_panel .login_box_bg {
+    position: absolute;
+    height: 506px;
+    width: 400px;
+    top: 48px;
+    right: 30px;
+    display: block;
+    background: #56B1D0;
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"
+}
+
+.login_banner .login_panel .login_box {
+    position: absolute;
+    height: 448px;
+    width: 356px;
+    top: 48px;
+    right: 30px;
+    padding: 30px 22px 22px 22px
+}
+
+.login_banner .login_panel .login_box ::-webkit-input-placeholder {
+    color: #FFFFFF
+}
+
+.login_banner .login_panel .login_box :-moz-placeholder {
+    color: #FFFFFF
+}
+
+.login_banner .login_panel .login_box ::-moz-placeholder {
+    color: #FFFFFF
+}
+
+.login_banner .login_panel .login_box :-ms-input-placeholder {
+    color: #FFFFFF
+}
+
+.login_banner .login_panel .login_box .login_title {
+    font-family: "Microsoft Yahei", "宋体", "黑体", SimSun, Verdana, sans-serif;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 38px 0 35px 0
+}
+
+.login_banner .login_panel .login_box .login_text_wrap {
+    margin-bottom: 25px;
+    position: relative
+}
+
+.login_banner .login_panel .login_box .login_text_wrap.none {
+    margin-bottom: 0px
+}
+
+.login_banner .login_panel .login_box .login_text_wrap label {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    color: #D3E9F0;
+    font-size: 20px;
+    cursor: text
+}
+
+.login_banner .login_panel .login_box .login_text_wrap .error_msg {
+    position: absolute;
+    line-height: 27px;
+    color: #FF5A12;
+    background: #FFFFFF;
+    width: 342px;
+    padding-left: 14px;
+    left: 0;
+    top: 57px;
+    top: 51 px\0;
+    font-size: 13px;
+    display: none
+}
+
+.login_banner .login_panel .login_box .login_text_wrap .error_msg:nth-child(2) {
+    top: 57 px\9
+}
+
+.login_banner .login_panel .login_box .login_text {
+    font-size: 20px;
+    padding: 15px 14px;
+    width: 326px;
+    background-color: transparent !important;
+    outline: none;
+    border: 1px solid #D3E9F0;
+    color: #FFFFFF
+}
+
+.login_banner .login_panel .login_box .login_text.login_code {
+    width: 134px
+}
+
+.login_banner .login_panel .login_box .login_forget {
+    line-height: 38px;
+    margin-bottom: 48px
+}
+
+.login_banner .login_panel .login_box .login_forget a {
+    color: #FFFFFF;
+    text-decoration: none
+}
+
+.login_banner .login_panel .login_box .login_forget a:hover {
+    text-decoration: underline
+}
+
+.login_banner .login_panel .login_box .login_forget .checkbox {
+    padding-left: 21px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url(../images/login_checkbox.png) no-repeat 0 center;
+    outline: 0
+}
+
+.login_banner .login_panel .login_box .login_forget .checkbox, .login_banner .login_panel .login_box .login_forget .checkbox:hover {
+    text-decoration: none
+}
+
+.login_banner .login_panel .login_box .login_forget .checkbox.checked {
+    background: url(../images/login_checked.png) no-repeat 0 center
+}
+
+.login_banner .login_panel .login_box .login_button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Microsoft Yahei", "宋体", "黑体", SimSun, Verdana, sans-serif;
+    width: 100%;
+    height: 56px;
+    font-size: 24px;
+    border: 1px solid #D2E7ED;
+    color: #FFFFFF;
+    outline: none;
+    background: transparent
+}
+
+.login_banner .login_panel .login_box .login_button_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    width: 100%;
+    height: 56px;
+    display: block
+}
+
+.login_footer {
+    height: 220px;
+    display: none
+}
+
+.login_footer ul.fl {
+    margin: 0 -18px;
+    padding: 0;
+    text-align: center
+}
+
+.login_footer ul.fl li {
+    width: 25%;
+    list-style: none;
+    float: left
+}
+
+.login_footer ul.fl li .img {
+    margin: 40px 0 12px 0
+}
+
+.login_footer ul.fl li .title {
+    color: #656565;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 30px
+}
+
+.login_footer ul.fl li .desc {
+    font-size: 14px;
+    color: #666666;
+    line-height: 34px
+}

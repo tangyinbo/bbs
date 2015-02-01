@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestpay.bbs.mapper.SubjectMapper">
+	<resultMap type="subject" id="Subject">
+		<id property="subId" column="SUB_ID" />
+		<result property="authorId" column="AUTHOR_ID" />
+		<result property="title" column="TITLE" />
+		<result property="content" column="CONTENT" />
+		<result property="reply" column="REPLY" />
+		<result property="createDate" column="CREATE_DATE" />
+		<result property="modifyDate" column="MODIRY_DATE" />
+		<result property="hits" column="HITS" />
+		<result property="iconId" column="ICON_ID" />
+		<result property="subTypeId" column="SUBTYPE_ID" />
+		<result property="isElite" column="ISELITE" />
+		<result property="isTop" column="ISTOP" />
+		<result property="isLock" column="ISLOCK" />
+	</resultMap>
+	
+	<sql id="subject_basic_clm">
+		AUTHOR_ID,TITLE,CONTENT,REPLY,CREATE_DATE,MODIRY_DATE,HITS,ICON_ID,SUBTYPE_ID,ISELITE,ISTOP,ISLOCK
+	</sql>
+
+	<sql id="subject_all_clm">
+		SUB_ID,
+		<include refid="subject_basic_clm" />
+	</sql>
+
+	<insert id="addSubject" parameterType="subject" useGeneratedKeys="true" keyProperty="subId">
+		insert into t_bbs_subject(
+		<include refid="subject_basic_clm" />
+		)
+		values(#{authorId},#{title},#{content},#{reply},#{createDate},#{modifyDate},#{hits},#{iconId},#{subTypeId},#{isElite},#{isTop},#{isLock})
+	</insert>
+
+	<select id="selectSubjectById" parameterType="int" resultMap="Subject">
+		select
+		<include refid="subject_all_clm" />
+		from t_bbs_subject where SUB_ID = #{subId}
+	</select>
+	
+	<select id="listSubjectPage" parameterType="Page" resultMap="Subject">
+			select
+		<include refid="subject_all_clm" />
+		from t_bbs_subject where 1=1
+        <if test="entity.postType == 1">
+            and SUBTYPE_ID = 1
+        </if>
+        <if test="entity.postType == 2">
+            and SUBTYPE_ID = 2
+        </if>
+        <if test="entity.postType == 3">
+            and SUBTYPE_ID = 3
+        </if>
+        <if test="entity.postType == 4">
+            and SUBTYPE_ID = 4
+        </if>
+        <if test="entity.sortType == 0">
+            order by CREATE_DATE desc
+        </if>
+        <if test="entity.sortType == 1">
+            order by REPLY desc
+        </if>
+        <if test="entity.sortType == 2">
+
+            and ISELITE = 1
+        </if>
+    </select>
+</mapper>

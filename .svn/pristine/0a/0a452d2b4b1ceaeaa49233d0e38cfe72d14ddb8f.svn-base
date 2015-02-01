@@ -1,0 +1,62 @@
+package com.bestpay.bbs.action;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.bestpay.bbs.domain.Reply;
+import com.bestpay.bbs.provide.pagination.PageParameter;
+import com.bestpay.bbs.service.IReplyService;
+
+@Controller
+@RequestMapping(value = "/reply")
+public class ReplyAction {
+	@Autowired
+	private IReplyService replyService;
+
+	/**
+	 * 回贴列表
+	 * 
+	 * @param subjectId
+	 * @return
+	 */
+	@RequestMapping("/list")
+	public String listReply(int subjectId, int page,ModelMap modal) {
+		//设置分页属性,默认的是第一页,每页10条,可以通过构造器自定义参数
+		PageParameter<Reply> pages = new PageParameter<Reply>();
+		pages.setCurrentPage(page);
+		//查询条件实体
+		Reply reply = new Reply();
+		reply.setSubId(subjectId);
+		//分页查询参数实体设置
+		pages.setEntity(reply);
+		List<Reply> replys = replyService.listReply(pages);
+		pages.setResults(replys);
+		modal.put("pages", pages);
+		return "reply";
+	}
+	
+	/**
+	 * 回贴
+	 * @param subId
+	 * @param content
+	 * @return
+	 */
+	@RequestMapping("/add")
+	@ResponseBody
+	public String addReply(int subjectId,String content){
+		Reply reply = new Reply();
+		reply.setSubId(subjectId);
+		reply.setContent(content);
+		reply.setReplyDate(new Date());
+		int count =replyService.addReply(reply);
+		//获取楼层
+		int floor = replyService.getReplyFloorById(reply);
+		return floor+"";
+	}
+}

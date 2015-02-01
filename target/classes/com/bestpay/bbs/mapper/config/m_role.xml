@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestpay.bbs.mapper.M_RoleMapper">
+
+	<resultMap type="mRole" id="mRole">
+		<id column="r_id" property="roleId"/>
+		<result column="r_name" property="roleName"/>
+		<result column="r_des" property="roleDesc"/>
+		<result column="state" property="state"/>
+	</resultMap>
+	
+	<sql id="m_role_basic_clm_in">
+		r_name,r_des,state
+	</sql>
+	
+	<sql id="m_role_basic_clm">
+		r_id,<include refid="m_role_basic_clm_in"/>
+	</sql>
+	
+	<insert id="addRole" parameterType="mRole" useGeneratedKeys="true" keyProperty="roleId">
+		insert into t_bbs_m_role (<include refid="m_role_basic_clm_in"/>) values(#{roleName},#{roleDesc},#{state})
+	</insert>
+	
+	
+	<insert id="correlationPermissions" parameterType="list">
+		insert into t_bbs_m_rolepriv(r_id,priv_id) values
+		<foreach collection="list" item="item" separator="," open="(" close=")">
+			#{item.roleId},#{item.privId}
+		</foreach>
+	</insert>
+	
+	<delete id="unCorrelationPermissions" parameterType="list">
+		delete from t_bbs_m_rolepriv where 
+		<foreach collection="list" item="item" separator="or" open="(" close=")">
+			r_id=#{item.roleId} and priv_id=#{item.privId}
+		</foreach>
+	</delete>
+	
+</mapper>

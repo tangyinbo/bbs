@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestpay.bbs.mapper.M_PermissionMapper">
+	<resultMap type="mPermission" id="mPermission">
+		<id column="priv_id" property="privId" />
+		<result column="priv_name" property="privName" />
+		<result column="priv_url" property="privUrl" />
+		<result column="permission" property="permission" />
+		<result column="state" property="state" />
+	</resultMap>
+
+	<sql id="m_priv_basic_clm_in">
+		priv_name,priv_url,permission,state
+	</sql>
+	<sql id="m_priv_basic_clm">
+		priv_id,
+		<include refid="m_priv_basic_clm_in" />
+	</sql>
+
+	<insert id="addPermission" parameterType="mPermission" useGeneratedKeys="true" keyProperty="privId">
+		insert into t_bbs_m_priv(<include refid="m_priv_basic_clm_in"/>) values(#{privName},#{privUrl},#{permission},#{state})
+	</insert>
+
+</mapper>

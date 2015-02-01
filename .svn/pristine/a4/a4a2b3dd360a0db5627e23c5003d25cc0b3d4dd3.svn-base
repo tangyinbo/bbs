@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="/image/x-icon" href="http://biz.ziztour.net:80/images/favicon.ico" rel="icon">
+    <link type="/image/x-icon" href="http://biz.ziztour.net:80/images/favicon.ico" rel="shortcut icon">
+
+    <!-- Bootstrap -->
+    <!--<link href="bootstrap/css/bootstrap.css" rel="stylesheet">-->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="bbs-container">
+        <!-- 头部公司logo-->
+        <div class="m-heading">
+            <img src="resource/image/logo.jpg">
+        </div>
+
+        <!-- 论坛每日情况 -->
+        <div class="m-caption">
+
+
+        </div>
+        <!-- 帖子部分 -->
+        <div>
+            <!--<div class="post-head">-->
+                <!--<div class="bbs-btn posted-btn">发帖</div>-->
+            <!--</div>-->
+            <div class="post-body">
+                <div class="pbody-head">
+                    <div>吐槽</div>
+                    <div>活动</div>
+                    <div>建议</div>
+                    <div>分享</div>
+                </div>
+
+                <div class="post-container">
+                    <div class="post-item post-con-thead">
+                        <div class="post-row">
+                            <div class="col-main">
+                                <div class="pbody-title">
+                                    <div><a>最新</a></div>
+                                    <div><a>最热</a></div>
+                                    <div><a>精华</a></div>
+                                </div>
+                            </div>
+                            <div class="col-info post-thead">作者</div>
+                            <div class="col-hd post-thead">回复/查看</div>
+                            <div class="col-info post-thead">最后回复</div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[吐槽]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[吐槽]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[吐槽]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[吐槽]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[活动]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[吐槽]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[活动]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[吐槽]</a><a href="#" class="post-title"> ComsenzEXP X3版本发布（集成 APM 环境和 Discuz! X3）【最后更新：</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[活动]</a><a href="#" class="post-title">我吃什么好嘞</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-row">
+                            <div class="col-main post-context"><a class="post-label">[吐槽]</a><a href="#" class="post-title"> ComsenzEXP X3版本发布（集成 APM 环境和 Discuz! X3）【最后更新：</a></div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                            <div class="col-hd post-lower">
+                                <div>13</div>
+                                <div>258</div>
+                            </div>
+                            <div class="col-info post-lower">
+                                <div>西风雨</div>
+                                <div>2014-05-01 12:55:12</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-item post-pagination">
+                        <div class="bbs-pagination">
+                            <div><a href="#">1</a></div>
+                            <div><a href="#">2</a></div>
+                            <div><a href="#">3</a></div>
+                            <div><a href="#">4</a></div>
+                            <div><a href="#">5</a></div>
+                            <div><a href="#">6</a></div>
+                            <div><a href="#">7</a></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部快速发帖栏 -->
+        <div class="fast-post">
+            <div>
+                类别：<select id="postType">
+                    <option selected value="1">吐槽</option>
+                    <option value="2">活动</option>
+                    <option value="3">技术分享</option>
+                </select>
+                标题:<input type="text" id="postTitle">
+            </div>
+            <textarea id="postContent" name="postContent" cols="20" rows="2" class="ckeditor"></textarea>
+            <div id="posted-btn" class="bbs-btn posted-btn"> 发帖 </div>
+            <div id="posted-rset" class="bbs-btn posted-btn"> 重置 </div>
+        </div>
+
+    </div>
+
+
+    <!--&lt;!&ndash; jQuery (necessary for Bootstrap's JavaScript plugins) &ndash;&gt;-->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <!--&lt;!&ndash; Include all compiled plugins (below), or include individual files as needed &ndash;&gt;-->
+    <!--<script src="bootstrap/js/bootstrap.min.js"></script>-->
+
+    <script type="text/javascript">
+
+            CKEDITOR.replace("postContent");
+
+            $(document).ready(function() {
+                $("#posted-btn").click(function() {
+                    if (!$("#postType").val()) {
+                        alert("请选择帖子类型!");
+                        return;
+                    }
+
+                    if (!$("#postTitle").val()) {
+                        alert("请填写帖子标题!");
+                        return;
+                    }
+
+                    if (CKEDITOR.instances.postContent.getData() == "") {
+                        alert("请填写帖子内容");
+                        return;
+                    }
+
+                    $.post("/posted",
+                           { postTitle:$("#postTitle").val(),
+                             postContent: CKEDITOR.instances.postContent.getData(),
+                             postType:$("#postType").val() },
+                           function(data) {
+                                alert(data);
+                                alert("发帖成功");
+
+                            }, "json");
+                });
+
+                $("#posted-rset").click(function() {
+                    CKEDITOR.instances.postContent.setData("");
+                })
+            });
+    </script>
+</body>
+</html>

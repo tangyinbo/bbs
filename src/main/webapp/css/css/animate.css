@@ -1,0 +1,97 @@
+@charset "utf-8";
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #222222;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "宋体", "黑体", SimSun, Verdana, sans-serif;
+  font-weight: normal;
+}
+div {
+  display: block;
+}
+.bbs-container {
+  width: 970px;
+  margin: 0px auto;
+}
+.bbs-btn {
+  padding: 8px 15px;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+/*动画效果*/
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform-origin: top left;
+    -webkit-transform: rotate(30deg) scale(1);
+    border-bottom: 3px solid #428bca;
+  }
+  25% {
+    -webkit-transform-origin: top left;
+    -webkit-transform: rotate(10deg) scale(1);
+    border-bottom: 3px solid  white;
+  }
+  50% {
+    -webkit-transform-origin: top left;
+    -webkit-transform: rotate(0deg) scale(1);
+    border-bottom: 3px solid #428bca;
+  }
+  70% {
+    -webkit-transform: translate(-10px, -5px);
+    border-bottom: 3px solid #428bca;
+  }
+  75% {
+    -webkit-transform: translate(5px, 2px);
+    border-bottom: 3px solid #428bca;
+  }
+  100% {
+    -webkit-transform: translate(0px, 1px);
+    border-bottom: 3px solid #428bca;
+  }
+}
+@-moz-keyframes shake {
+  0% {
+    border-bottom: 3px solid #428bca;
+  }
+  50% {
+    border-bottom: 3px solid  white;
+  }
+  100% {
+    border-bottom: 3px solid #428bca;
+  }
+}
+@keyframes shake {
+  0% {
+    border-bottom: 3px solid #428bca;
+  }
+  50% {
+    border-bottom: 3px solid  white;
+  }
+  100% {
+    border-bottom: 3px solid #428bca;
+  }
+}

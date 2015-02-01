@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestpay.bbs.mapper.M_UserMapper">
+
+	<resultMap type="mUser" id="mUser">
+		<id column="u_id" property="userId"/>
+		<result column="u_name" property="userName"/>
+		<result column="u_passwd" property="password"/>
+		<result column="salt" property="salt"/>
+		<result column="state" property="state"/>
+	</resultMap>	
+	<sql id="m_user_basic_clm_in">
+		u_name,u_passwd,salt,state
+	</sql>
+	<sql id="m_user_basic_clm">
+		u_id,<include refid="m_user_basic_clm_in"/>
+	</sql>
+	<insert id="addUser" parameterType="mUser" useGeneratedKeys="true" keyProperty="userId">
+		insert into t_bbs_m_user(
+			<include refid="m_user_basic_clm_in"/>
+		) values(#{userName},#{password},#{salt},#{state});
+	</insert>
+	
+	<select id="findByName" parameterType="string" resultMap="mUser">
+		select <include refid="m_user_basic_clm"/> from t_bbs_m_user where u_name =#{userName}
+	</select>
+	
+	<insert id="correlationRoles" parameterType="list">
+		insert into t_bbs_m_userrole(u_id,r_id) values
+		<foreach collection="list" item="item" separator="," open="(" close=")">
+			#{item.userId},#{item.roleId}
+		</foreach>
+	</insert>
+	
+	<delete id="unCorrelationRoles" parameterType="list">
+		delete from t_bbs_m_userrole where 
+		<foreach collection="list" item="item" separator="or" open="(" close=")">
+			u_id=#{item.userId} and r_id=#{item.roleId}
+		</foreach>
+	</delete>
+	
+	<select id="listPermissions" parameterType="string" resultType="string">
+		select p1.permission from t_bbs_m_priv p1 where exists(
+				select 1 from t_bbs_m_user u left join t_bbs_m_userrole ur on u.u_id = ur.u_id 
+          					left join t_bbs_m_rolepriv rp on ur.r_id = rp.r_id 
+          		where rp.priv_id = p1.priv_id and u.u_name =#{userName}
+		)
+	</select>
+	
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="bestpay-bbs"
+  id="myeclipse.1420788429725"
+  context-root="/bestpay-bbs"
+  j2ee-spec="1.7"
+  archive="bestpay-bbs.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

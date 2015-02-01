@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@main-border-color : #428bca;//#428bca;//#0099FF;
+@main-bg-color : #888;
+@main-font-color : #333;
+@main-bgc-hover : #428bca;
+@main-bdc-hover : #428bca;
+@main-fc-hover : #fff;
+
+
+@mian-btn-bc : #428bca;
+@main-btn-fc : #428bca;
+@main-btn-bgc : #428bca;
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    .bbs-font();
+}
+
+div {
+    display: block;
+}
+//窗口宽度
+@window-width : 970px;
+
+.bbs-container {
+    width : @window-width;
+    margin: 0px auto;
+}
+
+//字体
+@bbs-df-ff : "Microsoft Yahei", "宋体", "黑体", SimSun, Verdana, sans-serif;
+@bbs-df-fc : #222;
+@bbs-df-fs : 14px;
+.bbs-font(@fc : @bbs-df-fc, @fs : @bbs-df-fs, @fw : normal, @ff : @bbs-df-ff) {
+    color : @fc;
+    font-size: @fs;
+    font-family : @ff;
+    font-weight: @fw;
+}
+
+//按钮
+.bbs-btn {
+    padding : 8px 15px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+//漂浮
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+//字体位置
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+//圆角
+.bbs-radius(@val : 4px) {
+    border-radius : @val;
+    -moz-border-radius: @val;
+    -webkit-border-radius: @val;
+}
+
+//透明
+.login-opacity(@val : .80) {
+    -moz-opacity: @val;
+    -khtml-opacity: @val;
+    opacity: @val;
+
+    filter: %("alpha(opacity=%a)", @val * 100);
+    -ms-filter : %("progid:DXImageTransform.Microsoft.Alpha(Opacity=%a)", @val * 100);
+}
+//圆角
+.border-radius(@common_weight:15px){
+    -webkit-border-radius:@common_weight;
+    -moz-border-radius:@common_weight;
+    border-radius: @common_weight;
+}
+//圆角
+.border-radius_detail(@t,@r,@b,@l){
+    -webkit-border-radius:@t @r @b @l;
+    -moz-border-radius:@t @r @b @l;
+    border-radius: @t @r @b @l;
+}

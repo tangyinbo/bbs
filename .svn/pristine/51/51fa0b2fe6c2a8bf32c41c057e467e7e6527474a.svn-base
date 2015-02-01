@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC 
+"-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties>
+		<property name="dialect" value="mysql" />
+		<property name="pageSqlId" value=".*Page$" />
+	</properties>
+	
+	<typeAliases>
+		<package name="com.bestpay.bbs.domain" />
+		<package name="com.bestpay.bbs.provide.pagination" />
+	</typeAliases>
+
+	<!-- mybatis-config.xml -->
+	<plugins>
+		<plugin interceptor="com.bestpay.bbs.provide.pagination.PaginationInterceptor">
+		<!-- 	<property name="dialect" value="mysql" />
+			<property name="pageSqlId" value=".Page$" /> -->
+		</plugin>
+	</plugins>
+</configuration>

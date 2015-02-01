@@ -1,0 +1,209 @@
+@charset "utf-8";
+@import "global-value.less";
+@import "animate.less";
+@bg_color:#f1f2f6;
+body{background: @bg_color;font-family:"微软雅黑";font-size: 12px;}
+
+*{margin:0px;padding:0px;}
+@bbs_reply_container_left_width:770px;//回复页面左边宽度
+@bbs_reply_container_right_width:190px;//右边宽度
+@bbs_reply_common_margin:10px;//common margin 宽度
+@sub_corlor:#ff5b00;
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+.front_center{text-align: center}
+//页面主容器
+.bbs_reply_container{
+	.bbs-container;
+	min-height: 500px;	
+	h3{
+		background: @bg_color;height: 40px;line-height: 40px;font-weight: bold;
+		text-align: center;
+		span{
+			color:@sub_corlor;
+			font-size: 15px;
+			font-weight: blod;
+		}	
+	}
+	margin-top: 40px;
+}
+//回复页面左边布局
+.bbs_reply_container_left{
+	//默认的所有的div都有圆角
+	div{
+		background: white;
+		.border-radius;}
+	box-sizing:border-box;
+	width:@bbs_reply_container_left_width;
+	min-height: 500px;
+	float:left;
+	//主题内容
+	.subject_content{
+		min-height: 300px;
+		.border-radius_detail(15px,15px,0px,0px);		
+	}
+	
+
+	//回贴内容容器布局
+	.repl_container{
+		div.repl_item{.border-radius(0);border-bottom: 3px solid @bg_color;}
+		//回贴项信息
+		.repl_item:after{conent:""}
+		//动画效果
+		div.repl_item_self{
+			-webkit-animation:shake 2s ease-out 0 1;
+			
+		}
+		.repl_item{
+			box-sizing: border-box;
+			height:153px;
+			padding-top: 20px;
+			div{
+				.border-radius_detail(0px,0px,0px,0px);
+				box-sizing: border-box;
+			}
+			@reply_personal_width:100px;
+			.reply_personal{
+				width:@reply_personal_width;
+				float:left;
+				padding-left: 24px;
+			}
+			.reply_personal_self{
+				border-left: 3px solid @sub_corlor ! important;
+				padding-left: 21px;
+			}
+			.reply_msg{
+				float:left;
+				width:(@bbs_reply_container_left_width)-@reply_personal_width;
+				padding:0 20px;
+				.reply_detail{
+					height:21px;line-height: 21px;
+					a{
+						display: inline-block;font-size: 15px;color:@sub_corlor;font-weight: bold;
+					}
+					.detail_as{
+						font-size: 12px;
+						color:#ccc;
+						padding:0 10px;
+					}
+					.reply_floor{
+						float: right;
+						display: inline-block;
+						width:60px;
+						background: #ccc;
+						text-align: center;
+						.border-radius_detail(5px,5px,5px,5px);
+					}
+				}
+				.reply_content{
+					margin-top: 20px;
+					font-size: 13px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+//回复页面右边布局
+.bbs_reply_container_right{
+	//默认的所有的div都有圆角
+	div{background: white;.border-radius;}
+	min-height: 200px;
+	box-sizing:border-box;
+	float:left;
+	width:@bbs_reply_container_right_width;
+	margin-left:@bbs_reply_common_margin;
+
+	.reply_bbs_fn{
+		width: @bbs_reply_container_right_width;
+		height:118px;
+	  	.border-radius_detail(5px,5px,5px,5px);
+	  	margin-bottom: 20px;
+	  	box-shadow: 0 0 5px 2px rgba(0,0,0,0.3);
+	}
+	.reply_bbs_adv{
+		width: @bbs_reply_container_right_width;
+		height:200px;
+	  	.border-radius_detail(5px,5px,5px,5px);
+	}
+}
+
+//分页条
+.bbs_reply_container .pgs{
+	box-sizing: border-box;
+	font-weight: bold;
+	padding-top: 20px;
+	text-align: center;
+	.border-radius_detail(0px,0px,15px,15px);
+	&.no-border-radius{
+		.border-radius_detail(0px,0px,0px,0px);
+	}
+	height:70px;
+	.pg{display: inline-block;}	
+	*:not(input){height:30px;}
+	.focus_item_style{background: @sub_corlor;color:white;}
+	.item_hover_style{background: #FF6633;color:white;}
+	a{
+		border:1px solid #ccc;
+		border-left: none;
+		display: inline-block;
+		height:30px;
+		line-height: 30px;
+		padding:0px 12px;color:black;font-family: "微软雅黑";
+		text-decoration: none;
+		font-size: 15px;
+		margin-left: -4px;
+		&.active_focus{.focus_item_style}
+	}
+	a:last-child{.border-radius_detail(0px,5px,5px,0px);}
+	label{font-size: 15px;
+		border:1px solid #ccc;
+		display: inline-block;
+		position: relative;
+		line-height: 30px;
+		padding:0 3px;}
+	label span{color:#ccc;}
+	
+	a:not(.disabled):not(.active_focus):hover{.item_hover_style}
+	.pgb{
+		display: inline-block;
+		border:1px solid #ccc;
+		.border-radius_detail(5px,0px,0px,5px);
+		a{border:none;.border-radius_detail(5px,0px,0px,5px);}
+	}
+}
+
+//文本编辑框
+.bbs_reply_container .cotent_edit{
+	margin-top: 20px;
+	height:275px;
+	box-sizing: border-box;
+	.border-radius_detail(0px,0px,0px,0px);
+	.submit_op{
+		.clearfix;
+		width:90%;
+		margin: 0 auto;
+		padding:10px 0;
+		button{
+			line-height: 21px;
+			color:white;
+			padding:5px 10px;
+			font-weight: bold;
+			background: @sub_corlor;
+			border:none;
+			.border-radius_detail(5px,5px,5px,5px);
+			cursor:pointer;
+			float:right;			
+		}
+	}
+}
+
+

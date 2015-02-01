@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bestpay.bbs.mapper.ReplyMapper">
+	<resultMap type="reply" id="Reply">
+		<id column="rep_id" property="repId"/>
+		<result column="SUB_ID" property="subId"/>
+		<result column="CONTENT" property="content"/>
+		<result column="AUTHOR_ID" property="authorId"/>
+		<result column="REPLY_DATE" property="replyDate"/>
+		<result column="ICON_ID" property="iconId"/>
+	</resultMap>
+	<sql id="reply_basic_clm_in">
+		SUB_ID,CONTENT,AUTHOR_ID,REPLY_DATE,ICON_ID
+	</sql>
+	<sql id="reply_basic_clm_out">
+		rep_id,<include refid="reply_basic_clm_in"/>
+	</sql>
+	
+	<insert id="addReply" parameterType="reply" useGeneratedKeys="true" keyProperty="repId">
+		insert into t_bbs_reply(<include refid="reply_basic_clm_in"/>) values(#{subId},#{content},#{authorId},#{replyDate},#{iconId})
+	</insert>
+	<select id="listReplyBySubjectPage" parameterType="page" resultMap="Reply">
+		select <include refid="reply_basic_clm_out"/> from  t_bbs_reply where sub_id = #{entity.subId}
+	</select>
+	
+	<select id="getReplyFloorById" parameterType="reply" resultType="int">
+		select count(*) from  t_bbs_reply where sub_id = #{subId} and rep_id <![CDATA[ <= ]]> #{repId}
+	</select>
+	
+</mapper>
